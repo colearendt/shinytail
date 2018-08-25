@@ -1,13 +1,15 @@
-
-
-simple_tail <- function(filename) {
+#' @export
+tail_proc <- function(filename) {
   pr <- processx::process$new(
     "tail",
-    args = c("-f",filename),
+    args = c("-Fn+1",filename),
     stdout = "|",
     stderr = "|"
     )
-  po <- pr$get_output_connection()
-  processx::conn_read_lines(po)
-  invisible(po)
+  return(pr)
+}
+
+#' @export
+read_output <- function(process) {
+  processx::conn_read_lines(process$get_output_connection())
 }
