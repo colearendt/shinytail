@@ -1,15 +1,17 @@
+#' Tail Process
+#'
+#' Beware buffering...
+#'
+#'
 #' @export
-tail_proc <- function(filename) {
+tail_proc <- function(filename, options="-n+1") {
   pr <- processx::process$new(
     "tail",
-    args = c("-Fn+1",filename),
+    args = c("-F",options,filename),
     stdout = "|",
     stderr = "|"
     )
   return(pr)
 }
 
-#' @export
-read_output <- function(process) {
-  processx::conn_read_lines(process$get_output_connection())
-}
+#tail_proc("myfile.txt")$read_output_lines()
