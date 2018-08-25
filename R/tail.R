@@ -4,7 +4,7 @@
 #'
 #'
 #' @export
-tail_proc <- function(filename, options="-n+1") {
+tail_proc <- function(filename, options=c("-n+1")) {
   pr <- processx::process$new(
     "tail",
     args = c("-F",options,filename),
