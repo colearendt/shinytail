@@ -2,8 +2,11 @@ Package: shinytail
 Version: 0.0.0.9000
 Title: What the Package Does (one line, title case)
 Description: What the package does (one paragraph).
-Authors@R: person("First", "Last", , "first.last@example.com", c("aut", "cre"))
-License: What license it uses
+Authors@R: c(
+  person("Cole", "Arendt", , "cole@rstudio.com", c("aut", "cre"))
+  ,person("RStudio", role = c("cph", "fnd"))
+  )
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 ByteCompile: true
