@@ -1,10 +1,10 @@
-#' Tail Process
+#' Tail a File
 #'
 #' Beware buffering...
 #'
 #'
 #' @export
-tail_proc <- function(filename, options=c("-n+1")) {
+tail_file <- function(filename, options=c("-n+1")) {
   pr <- processx::process$new(
     "tail",
     args = c("-F",options,filename),
