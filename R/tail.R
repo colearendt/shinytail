@@ -2,6 +2,9 @@
 #'
 #' Beware buffering...
 #'
+#' @param filename The file that will be tailed
+#' @param options A character vector of options to be passed to the tail command
+#' @return A processx::process object
 #'
 #' @export
 tail_file <- function(filename, options=c("-n+1")) {
