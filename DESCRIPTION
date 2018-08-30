@@ -1,7 +1,9 @@
 Package: shinytail
 Version: 0.0.0.9000
-Title: What the Package Does (one line, title case)
-Description: What the package does (one paragraph).
+Title: Tail a File in Shiny
+Description: Provides a server-side Shiny object for tailing a
+ file. Makes it easy to display such a file's updates to a Shiny
+ app in real-time.
 Authors@R: c(
   person("Cole", "Arendt", , "cole@rstudio.com", c("aut", "cre"))
   ,person("RStudio", role = c("cph", "fnd"))
