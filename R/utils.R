@@ -1,5 +1,5 @@
-
-write_to_file <- function(filename, sleep = 1, iterations = 1000) {
+#' @export
+recursiveWrite <- function(filename, sleep = 1, iterations = 1000) {
  i <- 0
  while (i < iterations) {
    i <- i + 1
