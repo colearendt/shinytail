@@ -1,5 +1,5 @@
 library(shiny)
-library(shinyCookie)
+library(shinytail)
 
 #' Define UI for application that demonstrates a simple shinyTail example
 #' @author Cole Arendt \email{cole@@rstudio.com}
