@@ -7,7 +7,7 @@
 #' @return A processx::process object
 #'
 #' @export
-tail_file <- function(filename, options=c("-n+1")) {
+tailFile <- function(filename, options=c("-n+1")) {
   pr <- processx::process$new(
     "tail",
     args = c("-F",options,filename),
