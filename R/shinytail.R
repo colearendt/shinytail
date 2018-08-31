@@ -5,3 +5,9 @@
 #' @importfrom shiny tags
 #' @importFrom shiny verbatimTextOutput
 "_PACKAGE"
+
+utils::globalVariables(
+  c(
+    "tags"
+  )
+)
