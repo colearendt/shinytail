@@ -11,3 +11,24 @@ recursiveRead <- function(x, process, interval = 100) {
     return(c(x, process$read_output_lines()))
   }
 }
+
+#' @export
+shinyTail <- function(outputId, placeholder = FALSE) {
+  div(tags$head(
+    tags$style(
+    paste0("#", outputId, "{
+      color:red;
+      font-size:12px;
+      font-style:italic;
+      overflow-y:scroll;
+      max-height: 500px;
+      background: ghostwhite;
+    }")
+    )
+  ),
+  shiny::verbatimTextOutput(
+    outputId = outputId,
+    placeholder = placeholder
+    )
+  )
+}
