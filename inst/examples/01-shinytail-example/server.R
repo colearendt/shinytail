@@ -1,5 +1,6 @@
 library(shiny)
-library(shinyCookie)
+library(shinytail)
+
 
 logfile <- "myfile.txt"
 
@@ -12,10 +13,11 @@ shinyServer(function(input, output, session) {
 
   all_data <- reactiveVal(value = NULL, label = "data")
   pr <- tail_file(logfile)
+
   observe({
-    invalidateLater(100);
-    all_data(c(all_data(), pr$read_output_lines()))
+    recursiveRead(all_data, pr)
   })
+
   # render file
   output$shinytail <- renderText({
     paste(all_data(), collapse = "\n")
