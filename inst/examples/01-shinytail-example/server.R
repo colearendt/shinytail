@@ -9,10 +9,10 @@ logfile <- "myfile.txt"
 shinyServer(function(input, output, session) {
 
   all_data <- reactiveVal(value = NULL, label = "data")
-  pr <- tail_file(logfile)
+  pr <- tailFile(logfile)
 
   observe({
-    recursiveRead(all_data, pr)
+    readStream(all_data, pr)
   })
 
   # render file
