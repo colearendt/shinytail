@@ -4,7 +4,7 @@ Have you ever wanted to follow a log file in real-time within a Shiny app? If yo
 
 The `shinytail` package should fill this desire. It provides helpers to easily:
 
- - use `processx` to execute `tail -f my.log` on the server
+ - use `processx` to execute `tail -f my.log` on the server (`tailFile`)
  - stream the results into Shiny using `readStream`
  - display the results in a "stream-friendly" UI widget called `shinyTail`
 
