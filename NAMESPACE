@@ -3,6 +3,6 @@
 export(recursiveRead)
 export(recursiveWrite)
 export(shinyTail)
-export(tail_file)
+export(tailFile)
 importFrom(processx,conn_read_lines)
 importFrom(processx,process)
