@@ -1,5 +1,5 @@
 #' @export
-recursiveRead <- function(x, process, interval = 100) {
+readStream <- function(x, process, interval = 100) {
   invalidateLater(interval);
 
   if (inherits(x, "reactiveVal")) {
