@@ -3,7 +3,7 @@ library(shinytail)
 
 #' Define UI for application that demonstrates a simple shinyTail example
 #' @author Cole Arendt \email{cole@@rstudio.com}
-shinyUI(function(req) {fluidPage(
+shinyUI(fluidPage(
     titlePanel("Shiny Tail"),
 
     sidebarLayout(
@@ -15,4 +15,4 @@ shinyUI(function(req) {fluidPage(
           shinyTail("shinytail")
         )
     )
-)})
+))
