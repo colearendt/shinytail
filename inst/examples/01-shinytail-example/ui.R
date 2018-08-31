@@ -8,9 +8,12 @@ shinyUI(function(req) {fluidPage(
 
     sidebarLayout(
         sidebarPanel(
+            tags$p("A file will be 'tailed' into Shiny")
         ),
 
         mainPanel(
+    tags$head(tags$style("#shinytail{color:red; font-size:12px; font-style:italic;
+overflow-y:scroll; max-height: 500px; background: ghostwhite;}")),
             shiny::verbatimTextOutput("shinytail")
         )
     )
